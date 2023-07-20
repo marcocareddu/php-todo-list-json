@@ -34,18 +34,21 @@
             <div class="pt-3">
                 <div class="pt-3" id="root">
 
-                    <!-- List Here -->
-                    <ul class="list-group">
-                        <li v-for="task in tasks" :key="task.id" class="list-group-item list-group-item-action">{{
-                            task.text }}</li>
-                    </ul>
+                    <div>
+                        <!-- List Here -->
+                        <ul class="list-group">
+                            <li v-for="task in tasks" :key="task.id" class="list-group-item list-group-item-action">{{
+                                task.text }}</li>
+                        </ul>
+                    </div>
+
+                    <!-- Add Task Button -->
+                    <form @submit.prevent="addTask" class="input-group mt-3">
+                        <input v-model.trim="newTask" type="text" class="form-control" placeholder="Aggiungi task">
+                        <button class="btn btn-outline-secondary" type="submit">Add Task</button>
+                    </form>
                 </div>
 
-                <!-- Add Task Button -->
-                <form @submit.prevent="addTask" class="input-group mt-3">
-                    <input v-model.trim="newTask" type="text" class="form-control" placeholder="Aggiungi task">
-                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Add Task</button>
-                </form>
             </div>
         </div>
     </div>

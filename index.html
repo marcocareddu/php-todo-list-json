@@ -42,7 +42,8 @@
                     <div>
                         <!-- List Here -->
                         <ul class="list-group">
-                            <li v-for="task in tasks" :key="task.id" class="list-group-item list-group-item-action"
+                            <li v-for="task in tasks" :key="task.id" @click="changeClass(task.id)"
+                                class="list-group-item list-group-item-action"
                                 :class="task.isDone ? 'text-decoration-line-through' : '' ">{{
                                 task.text }}</li>
                         </ul>

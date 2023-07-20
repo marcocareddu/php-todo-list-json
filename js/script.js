@@ -12,7 +12,7 @@ const app = createApp({
     },
     methods: {
 
-        // ! TODO Change
+        // Add new task woth POST API Call
         addTask() {
             const data = {
                 'newTask': {

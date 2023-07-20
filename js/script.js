@@ -7,6 +7,28 @@ const app = createApp({
     data() {
         return {
             newTask: '',
+            tasks: [
+                {
+                    text: 'Comprare il pane',
+                    isDone: false
+                },
+                {
+                    text: 'Ritirare i cappotti dalla lavanderia',
+                    isDone: false
+                },
+                {
+                    text: 'Tagliare il prato',
+                    isDone: false
+                },
+                {
+                    text: 'Fare le pulizie',
+                    isDone: false
+                },
+                {
+                    text: 'Allenarsi',
+                    isDone: false
+                },
+            ]
         }
     },
 

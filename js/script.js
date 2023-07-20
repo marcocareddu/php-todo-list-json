@@ -44,7 +44,11 @@ const app = createApp({
                 }
             });
 
-        }
+        },
+
+        removeTask(id) {
+            this.tasks = this.tasks.filter((task) => id !== task.id);
+        },
     },
 
     mounted() {

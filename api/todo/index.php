@@ -7,6 +7,8 @@ $tasks = json_decode($json_tasks, true);
 
 // Get Value from frontend
 $new_task = $_POST['newTask'] ?? null;
+$new_task = $_POST['removeTask'] ?? null;
+
 
 // Add new task
 if ($new_task) {

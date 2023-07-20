@@ -28,6 +28,17 @@ const app = createApp({
                 }).then(res => { this.tasks = res.data });
 
             this.newTask = '';
+        },
+
+        changeClass(id) {
+
+            // Toggle class @click
+            this.tasks.forEach(task => {
+                if (task.id === id) {
+                    task.isDone = !task.isDone;
+                }
+            });
+
         }
     },
 

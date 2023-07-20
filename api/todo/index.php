@@ -28,3 +28,9 @@ $tasks = [
         'id' => 4,
     ],
 ];
+
+// Create Json API response
+header('Content-Type: application/json');
+
+// Convert file into JSON
+echo json_encode($tasks);

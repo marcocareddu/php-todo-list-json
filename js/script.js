@@ -7,9 +7,12 @@ const app = createApp({
     data() {
         return {
             newTask: '',
+            tasks: [],
         }
     },
     methods: {
+
+        // ! TODO Change
         addTask() {
             this.tasks.push(
                 {
@@ -17,9 +20,19 @@ const app = createApp({
                     isDone: false,
                     id: 5,
                 },
+
+                this.newTask = '',
             )
         }
-    }
+    },
+
+    mounted() {
+
+        // Call API when mount html
+        axios.get('http://localhost/php-todo-list-json/api/todo/')
+            .then(res => { this.tasks = res.data });
+
+    },
 
 });
 

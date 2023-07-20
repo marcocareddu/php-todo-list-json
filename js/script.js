@@ -36,6 +36,17 @@ const app = createApp({
             ]
         }
     },
+    methods: {
+        addTask() {
+            this.tasks.push(
+                {
+                    text: this.newTask,
+                    isDone: false,
+                    id: 5,
+                },
+            )
+        }
+    }
 
 });
 

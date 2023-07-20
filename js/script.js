@@ -27,11 +27,9 @@ const app = createApp({
     },
 
     mounted() {
-
         // Call API when mount html
         axios.get('http://localhost/php-todo-list-json/api/todo/')
             .then(res => { this.tasks = res.data });
-
     },
 
 });

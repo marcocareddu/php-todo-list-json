@@ -10,23 +10,28 @@ const app = createApp({
             tasks: [
                 {
                     text: 'Comprare il pane',
-                    isDone: false
+                    isDone: false,
+                    id: 0,
                 },
                 {
                     text: 'Ritirare i cappotti dalla lavanderia',
-                    isDone: false
+                    isDone: false,
+                    id: 1,
                 },
                 {
                     text: 'Tagliare il prato',
-                    isDone: false
+                    isDone: false,
+                    id: 2,
                 },
                 {
                     text: 'Fare le pulizie',
-                    isDone: false
+                    isDone: false,
+                    id: 3,
                 },
                 {
                     text: 'Allenarsi',
-                    isDone: false
+                    isDone: false,
+                    id: 4,
                 },
             ]
         }

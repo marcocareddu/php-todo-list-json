@@ -32,17 +32,19 @@
 
             <h1>TODO List</h1>
             <div class="pt-3">
-                <div class="pt-3">
+                <div class="pt-3" id="root">
 
                     <!-- List Here -->
                     <ul>
                         <li></li>
                     </ul>
-
                 </div>
 
                 <!-- Add Task Button -->
-                <button>Aggiungi task</button>
+                <form @submit.prevent="addTask" class="input-group mb-3">
+                    <input v-model.trim="newTask" type="text" class="form-control" placeholder="Aggiungi task">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Add Task</button>
+                </form>
             </div>
         </div>
     </div>

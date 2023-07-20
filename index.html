@@ -36,7 +36,7 @@
 
                     <!-- List Here -->
                     <ul>
-                        <li></li>
+                        <li v-for="task in tasks" :key="task.id">{{ task.text }}</li>
                     </ul>
                 </div>
 

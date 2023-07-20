@@ -30,18 +30,19 @@
     <div class="container d-flex justify-content-center">
         <div class="mt-3">
 
-            <h1>TODO List</h1>
+            <h1>PHP Todo List</h1>
             <div class="pt-3">
                 <div class="pt-3" id="root">
 
                     <!-- List Here -->
-                    <ul>
-                        <li v-for="task in tasks" :key="task.id">{{ task.text }}</li>
+                    <ul class="list-group">
+                        <li v-for="task in tasks" :key="task.id" class="list-group-item list-group-item-action">{{
+                            task.text }}</li>
                     </ul>
                 </div>
 
                 <!-- Add Task Button -->
-                <form @submit.prevent="addTask" class="input-group mb-3">
+                <form @submit.prevent="addTask" class="input-group mt-3">
                     <input v-model.trim="newTask" type="text" class="form-control" placeholder="Aggiungi task">
                     <button class="btn btn-outline-secondary" type="button" id="button-addon2">Add Task</button>
                 </form>

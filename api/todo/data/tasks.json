@@ -1,4 +1,3 @@
-// Moved array from PHP
 [
     {
         "text": "Comprare il pane",
@@ -24,5 +23,5 @@
         "text": "Allenarsi",
         "isDone": false,
         "id": 4
-    },
+    }
 ]

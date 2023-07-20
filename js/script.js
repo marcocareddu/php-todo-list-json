@@ -14,15 +14,20 @@ const app = createApp({
 
         // ! TODO Change
         addTask() {
-            this.tasks.push(
-                {
+            const data = {
+                'newTask': {
                     text: this.newTask,
                     isDone: false,
                     id: 5,
-                },
+                }
+            };
 
-                this.newTask = '',
-            )
+            axios.post('http://localhost/php-todo-list-json/api/todo/', data,
+                {
+                    headers: { 'Content-Type': 'multipart/form-data' }
+                }).then(res => { this.tasks = res.data });
+
+            this.newTask = '';
         }
     },
 

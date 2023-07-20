@@ -42,10 +42,11 @@
                     <div>
                         <!-- List Here -->
                         <ul class="list-group">
-                            <li v-for="task in tasks" :key="task.id" @click="changeClass(task.id)"
-                                class="list-group-item list-group-item-action"
+                            <li v-for="task in tasks" :key="task.id + 1" @click="changeClass(task.id)"
+                                class="list-group-item list-group-item-action d-flex justify-content-between align-content-center"
                                 :class="task.isDone ? 'text-decoration-line-through' : '' ">{{
-                                task.text }}</li>
+                                task.text }} <button type="button" class="btn btn-danger ms-3"><i
+                                        class="fa-solid fa-trash-can"></i></button></li>
                         </ul>
                     </div>
 

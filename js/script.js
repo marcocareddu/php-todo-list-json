@@ -10,6 +10,12 @@ const app = createApp({
             tasks: [],
         }
     },
+
+    computed: {
+        getNewId() {
+            return this.tasks.length;
+        },
+    },
     methods: {
 
         // Add new task woth POST API Call
@@ -18,7 +24,7 @@ const app = createApp({
                 'newTask': {
                     text: this.newTask,
                     isDone: false,
-                    id: 5,
+                    id: this.getNewId,
                 }
             };
 
@@ -31,7 +37,6 @@ const app = createApp({
         },
 
         changeClass(id) {
-
             // Toggle class @click
             this.tasks.forEach(task => {
                 if (task.id === id) {
